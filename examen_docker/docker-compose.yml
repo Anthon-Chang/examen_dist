@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  servidor:
+    build:
+      context: ./servidor
+      dockerfile: Dockerfile
+    container_name: servidor
+    ports:
+      - "5020:5000"
+
+  cliente:
+    build:
+      context: ./cliente
+      dockerfile: Dockerfile
+    container_name: cliente
